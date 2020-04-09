@@ -9,9 +9,9 @@ View List
     <ul>
         {% for item in ls.item_set.all %}
             {% if item.complete == True %}
-                <li>{{item.text}} - COMPLETE</li>
+                <li>{{ item.text }} - COMPLETE</li>
             {% else %}
-                <li>{{item.text}} - INCOMPLETE</li>
+                <li>{{ item.text }} - INCOMPLETE</li>
             {% endif %}
         {% endfor %}
     </ul>
