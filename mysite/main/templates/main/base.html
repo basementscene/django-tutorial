@@ -1,16 +1,25 @@
+{% load static %}
+
 <html>
     <head>
         <title>
             {% block title %}
-                Lera's Fist Website
+                Lera's Website
             {% endblock %}
         </title>
+
+        <link rel="stylesheet" href="{% static 'css/sidenav.css' %}">
     </head>
 
     <body>
-        <div id="content", name="content">
-            {% block content %}
+        <div class="sidenav">
+            <a href="/home">Home</a>
+            <a href="/create">Create</a>
+            <a href="/2">View</a>
+        </div>
 
+        <div id="content", name="content", class="main">
+            {% block content %}
             {% endblock %}
         </div>
     </body>
